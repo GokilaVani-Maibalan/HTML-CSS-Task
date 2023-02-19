@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+         
+         body{
+            background-color: rgb(58, 57, 57);
+            color:white;
+            position: absolute;
+            left:20%
+        }
+        tr,
+        td {
+            border: 2px solid rgb(88, 86, 86);
+            margin: 5px;
+            padding: 5px;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        th {
+            border: 2px solid rgb(11, 11, 11);
+            margin: 5px;
+            padding: 5px;
+            color: white;
+            font-weight: bold;
+            font-size: large;
+            font-family:'Times New Roman';
+        }
+        input{
+            width:200px;
+            height:25px;
+            transition:2s;
+            border:2px solid rgb(10, 10, 10);
+            border-radius: 5px;
+        }
+        [type='checkbox'],[type='radio']{
+            width:50px;
+            height:13px;
+            transition: none;
+        }
+        button{
+            border:1px solid rgb(10, 10, 10);
+            border-radius: 5px;
+            height:25px;
+        }
+
+        label{
+            font-size: large;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .mandatory{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="title">FORMS</h1>
+    <p id="description">DOM Manipulation with Forms</p>
+    <form id="form">
+        <div class="form-group">
+            <label for="">FirstName<span class="mandatory">*</span></label><br>
+            <input type="text" id="first-name" placeholder="FirstName" required>
+            <br>
+            <br>
+            <label for="">LastName<span class="mandatory">*</span></label><br>
+            <input type="text" placeholder="LastName" id="last-name" required>
+            <br>
+            <br>
+            <label for="">Pincode</label><br>
+            <input text="number" placeholder="Pincode" id="pincode" required>
+            <br>
+            <br>
+            <label for="">Gender<span class="mandatory">*</span></label><br>
+            <input type="radio" id="gender_1" name="gender" value="Male" required>Male
+            <input type="radio" id="gender_2" name="gender" value="Female" required>Female
+            <br>
+            <br>
+            <label for="">Address<span class="mandatory">*</span></label><br>
+            <textarea placeholder="Address" id="address" required></textarea>
+            <br>
+            <br>
+            <label for="">Choice Of Food<span class="mandatory">*</span></label>
+            <br>
+            <input type="checkbox" class="checkbox" value="Vegetarian" id="veg" name="food">
+            <label for="veg" >Vegetarian</label>
+            <br>
+            <input type="checkbox" class="checkbox" value="Non-Vegetarian" id="non-veg" name="food">
+            <label for="non-veg" >Non-Vegetarian</label>
+            <br>
+            <input type="checkbox" class="checkbox" value="Chinese" id="chinese" name="food">
+            <label for="chinese" >Chinese</label>
+            <br>
+            <input type="checkbox" class="checkbox" value="Continental" id="continental" name="food">
+            <label for="continental" >Continental</label>
+            <br>
+            <input type="checkbox" class="checkbox" value="Arabian" id="arabian" name="food">
+            <label for="arabian"> Arabian</label>
+            <br>
+            <br>
+            <label for="">State</label><br>
+            <input type="text" id="state" placeholder="State" required>
+            <br>
+            <br>
+            <label for="">Country</label><br>
+            <input type="text" placeholder="Country" id="country" required>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </div>
+    </form>
+    <br>
+    <div class="user-data">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Pincode</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Food Choice</th>
+                    <th>State</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+
+</html>
